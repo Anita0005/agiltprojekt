@@ -31,6 +31,7 @@ public class MyFrame extends JFrame implements ActionListener{
         password = new JPasswordField();
         password.setBounds(170, 300, 300, 40);
         password.setFont(new Font("Roboto", Font.PLAIN, 15));
+	password.setToolTipText("password must be at least 8 characters");
         //Password field created.
 
         passwordVisible = new JCheckBox("Show password");
