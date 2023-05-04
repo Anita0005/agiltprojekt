@@ -79,6 +79,15 @@ public class MyFrame extends JFrame implements ActionListener{
             String userInput = userName.getText();
             String passInput = new String(password.getPassword());
         }
+
+        if(e.getSource() == passwordVisible) {
+            if (password.getEchoChar() == '\0') {
+                password.setEchoChar('*');
+            } 
+            else {
+                password.setEchoChar('\0');
+            }
+        }
 		
 	}
 
