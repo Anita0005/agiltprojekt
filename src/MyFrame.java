@@ -71,6 +71,12 @@ public class MyFrame extends JFrame implements ActionListener{
         this.add(passwordVisible);
         this.setVisible(true);
         //Adds everything to the frame.
+	    
+	    
+	this.setSize(200, 300) ;
+	this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	this.setLayout(null);
+	this.setVisible(true);    
     }
 
 	@Override
