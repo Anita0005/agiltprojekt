@@ -17,8 +17,8 @@ public class MyFrame extends JFrame implements ActionListener{
         this.setResizable(false);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setLayout(null);
-	this.getContentPane().setBackground(new Color(202, 236, 252));
-        //Frame created.
+	    this.getContentPane().setBackground(new Color(202, 236, 252));
+        //Frame created.HAHAAH
 
         userNameLabel = new JLabel("Username");
         userNameLabel.setBounds(100, 200, 100, 40);
@@ -32,14 +32,14 @@ public class MyFrame extends JFrame implements ActionListener{
         password = new JPasswordField();
         password.setBounds(170, 300, 300, 40);
         password.setFont(new Font("Roboto", Font.PLAIN, 15));
-	password.setToolTipText("password must be at least 8 characters");
+	    password.setToolTipText("password must be at least 8 characters");
         //Password field created.
 
         passwordVisible = new JCheckBox("Show password");
         passwordVisible.setBounds(170, 340, 500, 30);
         passwordVisible.setFont(new Font("Times New Roman", Font.PLAIN, 15));
         passwordVisible.addActionListener(this);
-	passwordVisible.setBackground(new Color(202, 236, 252));
+	    passwordVisible.setBackground(new Color(202, 236, 252));
         //If user want to se password.
 
         emailLabel = new JLabel("Email");
