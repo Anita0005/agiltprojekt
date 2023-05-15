@@ -99,6 +99,24 @@ public class MyFrame extends JFrame implements ActionListener{
 	public void actionPerformed(ActionEvent e) {
     
     if (e.getSource() == registerButton) {
+
+        String userinput = new String(userName.getText());
+        String password_input = new String(password.getPassword());
+        String email_input = new String(eMail.getText());
+
+        try {
+            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/javagui", "root", "Root123");
+            String query = "INSERT into user_info values('" + userinput + "','" + password_input + "','" + email_input + "')";
+            Statement statement = connection.createStatement();
+            int insert = statement.executeUpdate(query);
+
+
+        } catch (Exception exception) {
+
+            exception.printStackTrace();
+            
+        }
+
         this.dispose();
         MyFrameTwo frametwo = new MyFrameTwo();
         }
