@@ -17,6 +17,7 @@ public class MyFrame extends JFrame implements ActionListener{
         this.setResizable(false);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setLayout(null);
+	this.getContentPane().setBackground(new Color(202, 236, 252));
         //Frame created.
 
         userNameLabel = new JLabel("Username");
@@ -38,6 +39,7 @@ public class MyFrame extends JFrame implements ActionListener{
         passwordVisible.setBounds(170, 340, 500, 30);
         passwordVisible.setFont(new Font("Times New Roman", Font.PLAIN, 15));
         passwordVisible.addActionListener(this);
+	passwordVisible.setBackground(new Color(202, 236, 252));
         //If user want to se password.
 
         emailLabel = new JLabel("Email");
