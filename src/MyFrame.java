@@ -18,7 +18,7 @@ public class MyFrame extends JFrame implements ActionListener{
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setLayout(null);
 	    this.getContentPane().setBackground(new Color(202, 236, 252));
-        //Frame created.HAHAAH
+        //Frame created. 22222
 
         userNameLabel = new JLabel("Username");
         userNameLabel.setBounds(100, 200, 100, 40);
