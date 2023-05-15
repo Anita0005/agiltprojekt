@@ -13,6 +13,7 @@ public class MyFrameTwo extends JFrame implements ActionListener{
         this.setResizable(false);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setLayout(null);
+        this.setVisible(true);
         //Frame created.
     }
     @Override

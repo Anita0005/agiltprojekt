@@ -1,12 +1,15 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.event.ActionListener; 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.Statement;
 
 public class MyFrame extends JFrame implements ActionListener{
 
     JPasswordField password;
-    JLabel registrationLabel, passwordLabel, userNameLabel, emailLabel;
+    JLabel registrationLabel, passwordLabel, userNameLabel, emailLabel, projectname, projectsloga;
     JTextField userName, eMail;
     JButton registerButton;
     JCheckBox passwordVisible;
@@ -59,8 +62,22 @@ public class MyFrame extends JFrame implements ActionListener{
         registrationLabel.setFont(new Font("Times New Roman", Font.BOLD, 30));
         registrationLabel.setVerticalAlignment(JLabel.TOP);
         registrationLabel.setHorizontalAlignment(JLabel.CENTER);
-        registrationLabel.setBounds(120, 40, 350, 550);
+        registrationLabel.setBounds(120, 130, 350, 550);
         //Title created.
+
+        projectname = new JLabel();
+        projectname.setText("Hjärnans Hälsa");
+        projectname.setFont(new Font("Times New Roman", Font.BOLD, 30));
+        projectname.setVerticalAlignment(JLabel.TOP);
+        projectname.setHorizontalAlignment(JLabel.CENTER);
+        projectname.setBounds(120, 50, 350, 550);
+
+        projectsloga = new JLabel();
+        projectsloga.setText("STÄRK DIN HJÄRNA, STÄRK DITT LIV");
+        projectsloga.setFont(new Font("Times New Roman", Font.BOLD, 10));
+        projectsloga.setVerticalAlignment(JLabel.TOP);
+        projectsloga.setHorizontalAlignment(JLabel.CENTER);
+        projectsloga.setBounds(120, 85, 350, 550);
 
         this.add(userNameLabel);
         this.add(userName);
@@ -68,6 +85,8 @@ public class MyFrame extends JFrame implements ActionListener{
         this.add(passwordLabel);
         this.add(registerButton);
         this.add(registrationLabel);
+        this.add(projectname);
+        this.add(projectsloga);
         this.add(emailLabel);
         this.add(eMail);
         this.add(passwordVisible);
@@ -78,42 +97,67 @@ public class MyFrame extends JFrame implements ActionListener{
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-        if(e.getSource()== registerButton) {
-          String name = userName.getText();
-	  String passWod = new	
-	  String(password.getPassword());
-		String emailadress = eMail.getText();
-		
-		try{
-			Connection connection =
-			DriverManager.getConnection("jdbc:mysq//local
-						    hist:3306/DreamTeam", "root", "Dreamteam1");
-	if(e.getSource() == registerButton){
-		String query = "INSERT INTO user VALUES("'+
-			name +"',"' + passWord + "',"' + email_adress
-			+"')";
-		Statement statement = 
-	connection.createStatement();
-		int ins = 
-		statement.executeUpdate(query);
-							    
-	}
-	}catch(Exception exception){
-		exception.printStackTrace();
-		
-	}	
-
-        if(e.getSource() == passwordVisible) {
-            if (password.getEchoChar() == '\0') {
-                password.setEchoChar('*');
-            } 
-            else {
-                password.setEchoChar('\0');
-            }
+    
+    if (e.getSource() == registerButton) {
+        this.dispose();
+        MyFrameTwo frametwo = new MyFrameTwo();
         }
-		
-	}
+    }
 
 }
-    
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//         String name = new String(userName.getText());
+// 	    String passWord = new String(password.getPassword());
+// 		String emailadress = new String(eMail.getText());
+        
+		
+// 		try {
+//             Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/grupp17", "root", "Syriaforever2001");
+            
+//             if(e.getSource() == registerButton) {
+//                 String query = "INSERT INTO user VALUES('"+ name +"','" + passWord + "','"+ emailadress +"')";
+//                 Statement statement = connection.createStatement();
+//                 int ins = statement.executeUpdate(query);
+							    
+// 	        }
+//             } catch(Exception exception){
+// 		         exception.printStackTrace();
+		
+// 	    }	
+
+    
+		
+// 	}
+// }
+
+
+
+// if(e.getSource() == passwordVisible) {
+//     if (password.getEchoChar() == '\0') {
+//         password.setEchoChar('*');
+//     } 
+//     else {
+//         password.setEchoChar('\0');
+//     }
+// }           
