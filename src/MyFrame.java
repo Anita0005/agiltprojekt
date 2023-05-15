@@ -79,9 +79,29 @@ public class MyFrame extends JFrame implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
         if(e.getSource()== registerButton) {
-            String userInput = userName.getText();
-            String passInput = new String(password.getPassword());
-        }
+          String name = userName.getText();
+	  String passWod = new	
+	  String(password.getPassword());
+		String emailadress = eMail.getText();
+		
+		try{
+			Connection connection =
+			DriverManager.getConnection("jdbc:mysq//local
+						    hist:3306/DreamTeam", "root", "Dreamteam1");
+	if(e.getSource() == registerButton){
+		String query = "INSERT INTO user VALUES("'+
+			name +"',"' + passWord + "',"' + email_adress
+			+"')";
+		Statement statement = 
+	connection.createStatement();
+		int ins = 
+		statement.executeUpdate(query);
+							    
+	}
+	}catch(Exception exception){
+		exception.printStackTrace();
+		
+	}	
 
         if(e.getSource() == passwordVisible) {
             if (password.getEchoChar() == '\0') {
