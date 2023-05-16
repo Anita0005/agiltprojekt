@@ -97,6 +97,16 @@ public class MyFrame extends JFrame implements ActionListener{
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
+
+    if(e.getSource() == passwordVisible) {
+        if (password.getEchoChar() == '\0') {
+            password.setEchoChar('*');
+        }
+        else {
+            password.setEchoChar('\0');
+        }
+    }
+        
     
     if (e.getSource() == registerButton) {
 
@@ -123,52 +133,6 @@ public class MyFrame extends JFrame implements ActionListener{
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//         String name = new String(userName.getText());
-// 	    String passWord = new String(password.getPassword());
-// 		String emailadress = new String(eMail.getText());
-        
-		
-// 		try {
-//             Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/grupp17", "root", "password");
-            
-//             if(e.getSource() == registerButton) {
-//                 String query = "INSERT INTO user VALUES('"+ name +"','" + passWord + "','"+ emailadress +"')";
-//                 Statement statement = connection.createStatement();
-//                 int ins = statement.executeUpdate(query);
-							    
-// 	        }
-//             } catch(Exception exception){
-// 		         exception.printStackTrace();
-		
-// 	    }	
-
-    
-		
-// 	}
-// }
-
 
 
 // if(e.getSource() == passwordVisible) {
