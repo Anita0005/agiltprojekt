@@ -14,6 +14,7 @@ public class MyFrameTwo extends JFrame implements ActionListener{
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setLayout(null);
         this.setVisible(true);
+        this.getContentPane().setBackground(new Color(202, 236, 252));
         //Frame created.
     }
     @Override
