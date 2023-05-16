@@ -151,7 +151,7 @@ public class MyFrame extends JFrame implements ActionListener{
         
 		
 // 		try {
-//             Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/grupp17", "root", "Syriaforever2001");
+//             Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/grupp17", "root", "password");
             
 //             if(e.getSource() == registerButton) {
 //                 String query = "INSERT INTO user VALUES('"+ name +"','" + passWord + "','"+ emailadress +"')";
