@@ -22,14 +22,14 @@ public class MyFrameTwo extends JFrame implements ActionListener{
         //Frame created.
 
         projectname2 = new JLabel();
-        projectname2.setText("Hjärnans Hälsa");
+        projectname2.setText("The Brains Health");
         projectname2.setFont(new Font("Times New Roman", Font.BOLD, 30));
         projectname2.setVerticalAlignment(JLabel.TOP);
         projectname2.setHorizontalAlignment(JLabel.CENTER);
         projectname2.setBounds(120, 50, 350, 550);
 
         projectsloga2 = new JLabel();
-        projectsloga2.setText("STÄRK DIN HJÄRNA, STÄRK DITT LIV");
+        projectsloga2.setText("STRENGTHEN YOUR BRAIN, STRENGTHEN YOUR LIFE");
         projectsloga2.setFont(new Font("Times New Roman", Font.BOLD, 10));
         projectsloga2.setVerticalAlignment(JLabel.TOP);
         projectsloga2.setHorizontalAlignment(JLabel.CENTER);

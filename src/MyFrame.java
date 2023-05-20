@@ -66,14 +66,14 @@ public class MyFrame extends JFrame implements ActionListener{
         //Title created.
 
         projectname = new JLabel();
-        projectname.setText("Hjärnans Hälsa");
+        projectname.setText("The Brains Health");
         projectname.setFont(new Font("Times New Roman", Font.BOLD, 30));
         projectname.setVerticalAlignment(JLabel.TOP);
         projectname.setHorizontalAlignment(JLabel.CENTER);
         projectname.setBounds(120, 50, 350, 550);
 
         projectsloga = new JLabel();
-        projectsloga.setText("STÄRK DIN HJÄRNA, STÄRK DITT LIV");
+        projectsloga.setText("STRENGTHEN YOUR BRAIN, STRENGTHEN YOUR LIFE");
         projectsloga.setFont(new Font("Times New Roman", Font.BOLD, 10));
         projectsloga.setVerticalAlignment(JLabel.TOP);
         projectsloga.setHorizontalAlignment(JLabel.CENTER);
