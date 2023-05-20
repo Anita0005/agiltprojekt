@@ -58,6 +58,7 @@ public class MyFrameTwo extends JFrame implements ActionListener{
 
         next = new JButton("Next");
         next.setBounds(133,250,90,30);
+        next.addActionListener(this);
         register_message.add(next);
 
         exit = new JButton("Exit");
@@ -68,11 +69,20 @@ public class MyFrameTwo extends JFrame implements ActionListener{
         this.add(register_message);
         this.add(projectname2);
         this.add(projectsloga2);
+
         this.setVisible(true);
 
 
     }
     @Override
 	public void actionPerformed(ActionEvent e){
+    
+
+    if (e.getSource() == next) {
+
+        this.dispose();
+        MyFrameThree framethree = new MyFrameThree();
+        }
     }
+
 }
