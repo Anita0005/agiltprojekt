@@ -53,7 +53,7 @@ public class MyFrameTwo extends JFrame implements ActionListener{
 
         // icon = new ImageIcon("icon.png");
         // image = new JLabel(icon);
-        // image.setBounds(50,50,50,50);
+        // image.setSize(100, 100);
         // register_message.add(image);
 
         next = new JButton("Next");
