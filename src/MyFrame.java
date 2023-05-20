@@ -133,13 +133,3 @@ public class MyFrame extends JFrame implements ActionListener{
     }
 
 }
-
-
-// if(e.getSource() == passwordVisible) {
-//     if (password.getEchoChar() == '\0') {
-//         password.setEchoChar('*');
-//     } 
-//     else {
-//         password.setEchoChar('\0');
-//     }
-// }           
