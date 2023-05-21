@@ -13,6 +13,7 @@ public class MyFrame extends JFrame implements ActionListener{
     JTextField userName, eMail;
     JButton registerButton;
     JCheckBox passwordVisible;
+    
 
     MyFrame() {
         this.setSize(600, 700);
@@ -35,7 +36,7 @@ public class MyFrame extends JFrame implements ActionListener{
         password = new JPasswordField();
         password.setBounds(170, 300, 300, 40);
         password.setFont(new Font("Roboto", Font.PLAIN, 15));
-	    password.setToolTipText("password must be at least 8 characters");
+	    password.setToolTipText("Password must be at least 8 characters");
         //Password field created.
 
         passwordVisible = new JCheckBox("Show password");
@@ -113,23 +114,37 @@ public class MyFrame extends JFrame implements ActionListener{
         String userinput = new String(userName.getText());
         String password_input = new String(password.getPassword());
         String email_input = new String(eMail.getText());
+        int len = password_input.length();
 
-        try {
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/javagui", "root", "Root123");
-            String query = "INSERT into user_info values('" + userinput + "','" + password_input + "','" + email_input + "')";
-            Statement statement = connection.createStatement();
-            int insert = statement.executeUpdate(query);
+        if (len <8) {
 
+            JOptionPane.showMessageDialog(null, "Password needs to have at least 8 characters.", "Add a new password", JOptionPane.INFORMATION_MESSAGE);
 
-        } catch (Exception exception) {
+        } else {
 
-            exception.printStackTrace();
-            
+            try {
+                Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/javagui", "root", "Root123");
+                String query = "INSERT into user_info values('" + userinput + "','" + password_input + "','" + email_input + "')";
+                Statement statement = connection.createStatement();
+                int insert = statement.executeUpdate(query);
+
+                this.dispose();
+                MyFrameTwo frametwo = new MyFrameTwo();
+        
+    
+    
+            } catch (Exception exception) {
+    
+                exception.printStackTrace();
+                
+            }
         }
 
-        this.dispose();
-        MyFrameTwo frametwo = new MyFrameTwo();
         }
+
+       
+
+        
     }
 
-}
+    }
