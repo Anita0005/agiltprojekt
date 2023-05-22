@@ -108,7 +108,6 @@ public class MyFrame extends JFrame implements ActionListener{
         }
     }
         
-    
     if (e.getSource() == registerButton) {
 
         String userinput = new String(userName.getText());
@@ -130,8 +129,6 @@ public class MyFrame extends JFrame implements ActionListener{
 
                 this.dispose();
                 MyFrameTwo frametwo = new MyFrameTwo();
-        
-    
     
             } catch (Exception exception) {
     
@@ -141,9 +138,6 @@ public class MyFrame extends JFrame implements ActionListener{
         }
 
         }
-
-       
-
         
     }
 

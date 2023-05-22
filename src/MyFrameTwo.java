@@ -63,6 +63,7 @@ public class MyFrameTwo extends JFrame implements ActionListener{
 
         exit = new JButton("Exit");
         exit.setBounds(133,300,90,30);
+        exit.addActionListener(this);
         register_message.add(exit);
 
 
@@ -83,6 +84,10 @@ public class MyFrameTwo extends JFrame implements ActionListener{
         this.dispose();
         MyFrameThree framethree = new MyFrameThree();
         }
+
+    if (e.getSource() == exit) {
+        System.exit(0);
+    }
     }
 
 }

@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.Arrays;
+
 public class MyFrameThree extends JFrame implements ActionListener{
 
     JLabel AboutUsTitle, projectname3, projectsloga3, introduction, developers, guiTitle, depressionTitle;
@@ -94,7 +94,6 @@ public class MyFrameThree extends JFrame implements ActionListener{
         layPane = new JLayeredPane();
         layPane.setBounds(0,120,900,680);
         
-
         page1 = new JPanel();
         page1.setBounds(0,50,900,680);
         page1.setOpaque(true);
@@ -102,13 +101,11 @@ public class MyFrameThree extends JFrame implements ActionListener{
         page1.setBackground(new Color(202, 236, 252));
         layPane.add(page1);
 
-        
         AboutUsTitle = new JLabel("About Us");
         AboutUsTitle.setBounds(355, 0, 200, 30);
         AboutUsTitle.setFont(new Font("Times New Roman", Font.BOLD, 30));
         page1.add(AboutUsTitle);
 
-        
         introduction = new JLabel();
         introduction.setText("Introduction");
         introduction.setFont(new Font("Times New Roman", Font.BOLD, 30));
@@ -163,10 +160,8 @@ public class MyFrameThree extends JFrame implements ActionListener{
         scrollPane2.setBounds(120, 50, 620, 540);
         scrollPane2.setHorizontalScrollBar(null);
         scrollPane2.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
-
         page2.add(scrollPane2);
         //Second page created.
-
 
         page3 = new JPanel();
         page3.setBounds(0,50,900,680);
@@ -208,7 +203,6 @@ public class MyFrameThree extends JFrame implements ActionListener{
         layPane.add(page4);
 
         //Page 4 created.
-
         page5 = new JPanel();
         page5.setBounds(0,50,900,680);
         page5.setOpaque(true);
@@ -228,8 +222,7 @@ public class MyFrameThree extends JFrame implements ActionListener{
         page5.add(scrollPane4);
 
         layPane.add(page5);
-       
-        this.add(layPane);
+
        
         this.add(layPane);
         this.setVisible(true);        
@@ -238,7 +231,6 @@ public class MyFrameThree extends JFrame implements ActionListener{
     @Override
 	public void actionPerformed(ActionEvent e){
 
-        
         if (e.getSource() == button1) {
             layPane.removeAll();
             layPane.add(page1);
@@ -256,7 +248,6 @@ public class MyFrameThree extends JFrame implements ActionListener{
             layPane.add(page3);
             layPane.repaint();
         }
-
         
         if (e.getSource() == button4) {
             layPane.removeAll();
@@ -278,11 +269,7 @@ public class MyFrameThree extends JFrame implements ActionListener{
                 System.exit(0);
             }
 
-
-
         }
-
-
         
 
     }
